@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BancaEnLinea")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a77266ec69a0fcca91058280110ddb69b07ad5d")]
 [assembly: System.Reflection.AssemblyProductAttribute("BancaEnLinea")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BancaEnLinea")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
