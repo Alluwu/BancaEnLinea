@@ -35,7 +35,7 @@ public class MovimientoSaldosService(UserManager<IdentityUser> user, BancaDbCont
     {
         try
         {
-            var query = _context.MovimientoSaldos.CountAsync();
+            var query = await _context.MovimientoSaldos.CountAsync();
 
             var movimientos = await _context.MovimientoSaldos
                 .OrderByDescending(m => m.Fecha)
@@ -63,9 +63,9 @@ public class MovimientoSaldosService(UserManager<IdentityUser> user, BancaDbCont
     public Task<AuthResponse<List<string>>> ListaTipoMovimientoAsync()
     {
         var tipoMovimiento = new List<string>();
-        foreach (var TipoMovimiento in Enum.GetValues(typeof(TipoMovimiento)))
+        foreach (var tipo in Enum.GetValues(typeof(TipoMovimiento)))
         {
-            tipoMovimiento.Add(tipoMovimiento.ToString());
+            tipoMovimiento.Add(tipo.ToString());
         }
         var response = new AuthResponse<List<string>>
         {
