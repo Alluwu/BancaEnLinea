@@ -6,6 +6,6 @@ namespace BancaEnLinea.Services.Auth;
 
 public interface IAuthService
 {
-    Task<AuthResponse> RegistroAsync(UsuarioRequest request);
-    Task<AuthResponse> LoginAsync(Login request);
+    Task< AuthResponse<string>> RegistroAsync(UsuarioRequest request);
+    Task< AuthResponse<string>> LoginAsync(Login request);
 }

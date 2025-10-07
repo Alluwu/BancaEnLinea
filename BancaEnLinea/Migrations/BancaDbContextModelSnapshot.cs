@@ -17,7 +17,7 @@ namespace BancaEnLinea.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.9")
+                .HasAnnotation("ProductVersion", "9.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -74,7 +74,7 @@ namespace BancaEnLinea.Migrations
                         .HasColumnType("text")
                         .HasColumnName("Alias");
 
-                    b.Property<int?>("CuentaIdCuenta")
+                    b.Property<int?>("IdCuenta")
                         .HasColumnType("integer");
 
                     b.Property<string>("IdUsuario")
@@ -91,7 +91,7 @@ namespace BancaEnLinea.Migrations
 
                     b.HasKey("IdCuentaUsuario");
 
-                    b.HasIndex("CuentaIdCuenta");
+                    b.HasIndex("IdCuenta");
 
                     b.HasIndex("IdUsuario");
 
@@ -347,7 +347,7 @@ namespace BancaEnLinea.Migrations
                 {
                     b.HasOne("BancaEnLinea.Entities.Cuenta", "Cuenta")
                         .WithMany()
-                        .HasForeignKey("CuentaIdCuenta");
+                        .HasForeignKey("IdCuenta");
 
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "Usuario")
                         .WithMany()

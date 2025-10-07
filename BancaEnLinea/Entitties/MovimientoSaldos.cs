@@ -10,7 +10,7 @@ public class MovimientoSaldos
     [Key]
     [Column("idMovimiento")]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public required int IdMomvimiento { get; set; }
+    public int IdMomvimiento { get; set; }
     [Column("idCuentaUsuario")]
     public int? IdCuentaUsuario { get; set; }
     [ForeignKey("IdCuentaUsuario")]
@@ -24,6 +24,6 @@ public class MovimientoSaldos
     [Column("tipoMovimiento")]
     public string? TipoMovimiento { get; set; }
     [Column("fecha")]
-    public DateTime Fecha { get; set; } = DateTime.Now;
+    public DateTime Fecha { get; set; } = DateTime.UtcNow;
 
 }

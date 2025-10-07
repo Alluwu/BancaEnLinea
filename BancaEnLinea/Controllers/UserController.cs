@@ -2,6 +2,7 @@ using BancaEnLinea.Dto.Request;
 using BancaEnLinea.Services.Auth;
 using Microsoft.AspNetCore.Mvc;
 
+namespace BancaEnLinea.Contollers;
 [ApiController]
 [Route("user")]
 public class UserController : ControllerBase

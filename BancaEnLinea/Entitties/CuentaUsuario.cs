@@ -12,8 +12,8 @@ public class CuentaUsuario
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public required int IdCuentaUsuario { get; set; }
     [Column("idCuenta")]
-    public int idCuenta { get; set; }
-    [Column("IdCuenta")]
+    public int IdCuenta { get; set; }
+    [ForeignKey("IdCuenta")]
     public Cuenta? Cuenta { get; set; }
     [Column("idUsuario")]
     public string? IdUsuario{ get; set; }
